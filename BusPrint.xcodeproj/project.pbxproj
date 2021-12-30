@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F09CE9C74AD5656F2ECA713 /* Pods_BusPrint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B53D9713AFCDC192BB4F121 /* Pods_BusPrint.framework */; };
+		5908EB71277D6F5A00A69ECD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908EB70277D6F5A00A69ECD /* Home.swift */; };
 		591C4FDE277D14AD00803DAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 591C4FDD277D14AD00803DAE /* GoogleService-Info.plist */; };
 		5956EF0C277D11DD00449B69 /* BusPrintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5956EF0B277D11DD00449B69 /* BusPrintApp.swift */; };
 		5956EF0E277D11DD00449B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5956EF0D277D11DD00449B69 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5908EB70277D6F5A00A69ECD /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		591C4FDD277D14AD00803DAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5956EF08277D11DD00449B69 /* BusPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5956EF0B277D11DD00449B69 /* BusPrintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusPrintApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		5908EB6A277D6B1000A69ECD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5908EB70277D6F5A00A69ECD /* Home.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -93,6 +96,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		5908EB6F277D6CF800A69ECD /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				5956EF0D277D11DD00449B69 /* ContentView.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
 		5956EEFF277D11DD00449B69 = {
 			isa = PBXGroup;
 			children = (
@@ -114,10 +125,10 @@
 		5956EF0A277D11DD00449B69 /* BusPrint */ = {
 			isa = PBXGroup;
 			children = (
+				5908EB6F277D6CF800A69ECD /* Navigator */,
 				5908EB68277D6A3300A69ECD /* Features */,
 				591C4FDD277D14AD00803DAE /* GoogleService-Info.plist */,
 				5956EF0B277D11DD00449B69 /* BusPrintApp.swift */,
-				5956EF0D277D11DD00449B69 /* ContentView.swift */,
 				5908EB6E277D6BBE00A69ECD /* Resources */,
 				5956EF0F277D11DF00449B69 /* Assets.xcassets */,
 				5956EF11277D11DF00449B69 /* Preview Content */,
@@ -266,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5956EF0E277D11DD00449B69 /* ContentView.swift in Sources */,
+				5908EB71277D6F5A00A69ECD /* Home.swift in Sources */,
 				5956EF0C277D11DD00449B69 /* BusPrintApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
