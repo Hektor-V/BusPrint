@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F09CE9C74AD5656F2ECA713 /* Pods_BusPrint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B53D9713AFCDC192BB4F121 /* Pods_BusPrint.framework */; };
+		591C4FDE277D14AD00803DAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 591C4FDD277D14AD00803DAE /* GoogleService-Info.plist */; };
 		5956EF0C277D11DD00449B69 /* BusPrintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5956EF0B277D11DD00449B69 /* BusPrintApp.swift */; };
 		5956EF0E277D11DD00449B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5956EF0D277D11DD00449B69 /* ContentView.swift */; };
 		5956EF10277D11DF00449B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5956EF0F277D11DF00449B69 /* Assets.xcassets */; };
@@ -14,11 +16,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		591C4FDD277D14AD00803DAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5956EF08277D11DD00449B69 /* BusPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5956EF0B277D11DD00449B69 /* BusPrintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusPrintApp.swift; sourceTree = "<group>"; };
 		5956EF0D277D11DD00449B69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5956EF0F277D11DF00449B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5956EF12277D11DF00449B69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9B53D9713AFCDC192BB4F121 /* Pods_BusPrint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusPrint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A24CF2759D6BB430EE402479 /* Pods-BusPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusPrint.release.xcconfig"; path = "Target Support Files/Pods-BusPrint/Pods-BusPrint.release.xcconfig"; sourceTree = "<group>"; };
+		A85FFB061F32A83EDC387D5D /* Pods-BusPrint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusPrint.debug.xcconfig"; path = "Target Support Files/Pods-BusPrint/Pods-BusPrint.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F09CE9C74AD5656F2ECA713 /* Pods_BusPrint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +44,8 @@
 			children = (
 				5956EF0A277D11DD00449B69 /* BusPrint */,
 				5956EF09277D11DD00449B69 /* Products */,
+				95C0088C97C96EF2D825517D /* Pods */,
+				7F45ACA489B7CF471BDC9975 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +60,7 @@
 		5956EF0A277D11DD00449B69 /* BusPrint */ = {
 			isa = PBXGroup;
 			children = (
+				591C4FDD277D14AD00803DAE /* GoogleService-Info.plist */,
 				5956EF0B277D11DD00449B69 /* BusPrintApp.swift */,
 				5956EF0D277D11DD00449B69 /* ContentView.swift */,
 				5956EF0F277D11DF00449B69 /* Assets.xcassets */,
@@ -67,6 +77,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7F45ACA489B7CF471BDC9975 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B53D9713AFCDC192BB4F121 /* Pods_BusPrint.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95C0088C97C96EF2D825517D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A85FFB061F32A83EDC387D5D /* Pods-BusPrint.debug.xcconfig */,
+				A24CF2759D6BB430EE402479 /* Pods-BusPrint.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5956EF16277D11DF00449B69 /* Build configuration list for PBXNativeTarget "BusPrint" */;
 			buildPhases = (
+				1E49FABE90D012CEA7414FD5 /* [CP] Check Pods Manifest.lock */,
 				5956EF04277D11DD00449B69 /* Sources */,
 				5956EF05277D11DD00449B69 /* Frameworks */,
 				5956EF06277D11DD00449B69 /* Resources */,
+				F034A05F7667CBADD29D6705 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,10 +156,53 @@
 			files = (
 				5956EF13277D11DF00449B69 /* Preview Assets.xcassets in Resources */,
 				5956EF10277D11DF00449B69 /* Assets.xcassets in Resources */,
+				591C4FDE277D14AD00803DAE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E49FABE90D012CEA7414FD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BusPrint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F034A05F7667CBADD29D6705 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusPrint/Pods-BusPrint-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusPrint/Pods-BusPrint-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BusPrint/Pods-BusPrint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5956EF04277D11DD00449B69 /* Sources */ = {
@@ -263,6 +335,7 @@
 		};
 		5956EF17277D11DF00449B69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A85FFB061F32A83EDC387D5D /* Pods-BusPrint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +365,7 @@
 		};
 		5956EF18277D11DF00449B69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24CF2759D6BB430EE402479 /* Pods-BusPrint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
