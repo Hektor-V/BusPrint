@@ -39,6 +39,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5908EB68277D6A3300A69ECD /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				5908EB69277D6B0600A69ECD /* Authenication */,
+				5908EB6A277D6B1000A69ECD /* Home */,
+				5908EB6B277D6B1B00A69ECD /* Notification */,
+				5908EB6C277D6B2F00A69ECD /* Track */,
+				5908EB6D277D6B4500A69ECD /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		5908EB69277D6B0600A69ECD /* Authenication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authenication;
+			sourceTree = "<group>";
+		};
+		5908EB6A277D6B1000A69ECD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5908EB6B277D6B1B00A69ECD /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		5908EB6C277D6B2F00A69ECD /* Track */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		5908EB6D277D6B4500A69ECD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5908EB6E277D6BBE00A69ECD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		5956EEFF277D11DD00449B69 = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +114,11 @@
 		5956EF0A277D11DD00449B69 /* BusPrint */ = {
 			isa = PBXGroup;
 			children = (
+				5908EB68277D6A3300A69ECD /* Features */,
 				591C4FDD277D14AD00803DAE /* GoogleService-Info.plist */,
 				5956EF0B277D11DD00449B69 /* BusPrintApp.swift */,
 				5956EF0D277D11DD00449B69 /* ContentView.swift */,
+				5908EB6E277D6BBE00A69ECD /* Resources */,
 				5956EF0F277D11DF00449B69 /* Assets.xcassets */,
 				5956EF11277D11DF00449B69 /* Preview Content */,
 			);
