@@ -15,7 +15,7 @@ extension Color {
     static let tabcolor = Color("tabview")
 }
 
-struct Home: View
+struct HomeView: View
     {
         @State var date = Date()                        // Date() is the initializer for Date objects, which retrieve date & time information based on the user’s region.
     //let time = ObservableObject
@@ -161,8 +161,8 @@ struct Home: View
         
     }
 
-struct Home_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        HomeView()
     }
 }

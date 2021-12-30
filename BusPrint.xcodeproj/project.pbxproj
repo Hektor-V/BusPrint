@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3F09CE9C74AD5656F2ECA713 /* Pods_BusPrint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B53D9713AFCDC192BB4F121 /* Pods_BusPrint.framework */; };
-		5908EB71277D6F5A00A69ECD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908EB70277D6F5A00A69ECD /* Home.swift */; };
+		5908EB71277D6F5A00A69ECD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908EB70277D6F5A00A69ECD /* HomeView.swift */; };
+		5908EB78277D769E00A69ECD /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908EB77277D769E00A69ECD /* TrackView.swift */; };
+		5908EB7A277D76BB00A69ECD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908EB79277D76BB00A69ECD /* NotificationView.swift */; };
+		5908EB7D277D76FF00A69ECD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908EB7C277D76FF00A69ECD /* AuthenticationView.swift */; };
+		5908EB7F277D774F00A69ECD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908EB7E277D774F00A69ECD /* SettingsView.swift */; };
 		591C4FDE277D14AD00803DAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 591C4FDD277D14AD00803DAE /* GoogleService-Info.plist */; };
 		5956EF0C277D11DD00449B69 /* BusPrintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5956EF0B277D11DD00449B69 /* BusPrintApp.swift */; };
 		5956EF0E277D11DD00449B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5956EF0D277D11DD00449B69 /* ContentView.swift */; };
@@ -17,7 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5908EB70277D6F5A00A69ECD /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		5908EB70277D6F5A00A69ECD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5908EB77277D769E00A69ECD /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
+		5908EB79277D76BB00A69ECD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		5908EB7C277D76FF00A69ECD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		5908EB7E277D774F00A69ECD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		591C4FDD277D14AD00803DAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5956EF08277D11DD00449B69 /* BusPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5956EF0B277D11DD00449B69 /* BusPrintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusPrintApp.swift; sourceTree = "<group>"; };
@@ -44,7 +52,7 @@
 		5908EB68277D6A3300A69ECD /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				5908EB69277D6B0600A69ECD /* Authenication */,
+				5908EB69277D6B0600A69ECD /* Authentication */,
 				5908EB6A277D6B1000A69ECD /* Home */,
 				5908EB6B277D6B1B00A69ECD /* Notification */,
 				5908EB6C277D6B2F00A69ECD /* Track */,
@@ -53,17 +61,18 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		5908EB69277D6B0600A69ECD /* Authenication */ = {
+		5908EB69277D6B0600A69ECD /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				5908EB7C277D76FF00A69ECD /* AuthenticationView.swift */,
 			);
-			path = Authenication;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		5908EB6A277D6B1000A69ECD /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5908EB70277D6F5A00A69ECD /* Home.swift */,
+				5908EB70277D6F5A00A69ECD /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -71,6 +80,7 @@
 		5908EB6B277D6B1B00A69ECD /* Notification */ = {
 			isa = PBXGroup;
 			children = (
+				5908EB79277D76BB00A69ECD /* NotificationView.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -78,6 +88,7 @@
 		5908EB6C277D6B2F00A69ECD /* Track */ = {
 			isa = PBXGroup;
 			children = (
+				5908EB77277D769E00A69ECD /* TrackView.swift */,
 			);
 			path = Track;
 			sourceTree = "<group>";
@@ -85,6 +96,7 @@
 		5908EB6D277D6B4500A69ECD /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				5908EB7E277D774F00A69ECD /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -276,9 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5908EB7F277D774F00A69ECD /* SettingsView.swift in Sources */,
 				5956EF0E277D11DD00449B69 /* ContentView.swift in Sources */,
-				5908EB71277D6F5A00A69ECD /* Home.swift in Sources */,
+				5908EB78277D769E00A69ECD /* TrackView.swift in Sources */,
+				5908EB7D277D76FF00A69ECD /* AuthenticationView.swift in Sources */,
+				5908EB71277D6F5A00A69ECD /* HomeView.swift in Sources */,
 				5956EF0C277D11DD00449B69 /* BusPrintApp.swift in Sources */,
+				5908EB7A277D76BB00A69ECD /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
