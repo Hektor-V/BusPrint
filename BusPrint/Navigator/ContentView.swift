@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
-    
+ 
 
     var body: some View {
         
@@ -22,26 +22,26 @@ struct ContentView: View {
                     Text("home")
                     
                 }
-//            Notification()
-//                .tabItem {
-//                    Image(systemName: "bell.fill")
-//
-//                    Text("Notification")
-//
-//
-//                }.badge(1)
-//
-//            Track()
-//                .tabItem {
-//                    Image(systemName: "binoculars")
-//                    Text("Track")
-//                }
-//            Settings()
-//                .tabItem {
-//                    Image(systemName: "gear")
-//                    Text("Settings")
-//
-//                }
+            NotificationView()
+                .tabItem {
+                    Image(systemName: "bell.fill")
+
+                    Text("Notification")
+
+
+                }.badge(1)
+
+            TrackView()
+                .tabItem {
+                    Image(systemName: "binoculars")
+                    Text("Track")
+                }
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
+
+                }
 
         }
         
