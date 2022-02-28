@@ -1,4 +1,8 @@
-/*
+/* The following was taken directly from the firebase documentation here: 
+https://firebase.google.com/docs/cloud-messaging/ios/client
+and is for allowing the app user to receive push notifications via firebase. The system requires
+a registration token, labeled down below. This code will remain commented until we have obtained an
+Apple developer license, required for setting up the below.
 
 //This registers the app for remote notifications
 if #available(iOS 10.0, *) {
@@ -44,5 +48,6 @@ func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: Str
   // TODO: If necessary send token to application server.
   // Note: This callback is fired at each app startup and whenever a new token is generated.
 }
+
 
 */
