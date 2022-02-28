@@ -20,6 +20,7 @@
 		5956EF0E277D11DD00449B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5956EF0D277D11DD00449B69 /* ContentView.swift */; };
 		5956EF10277D11DF00449B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5956EF0F277D11DF00449B69 /* Assets.xcassets */; };
 		5956EF13277D11DF00449B69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5956EF12277D11DF00449B69 /* Preview Assets.xcassets */; };
+		8DDD1F3C27CD843900C612C8 /* NotificationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD1F3B27CD843900C612C8 /* NotificationSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5956EF0D277D11DD00449B69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5956EF0F277D11DF00449B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5956EF12277D11DF00449B69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8DDD1F3B27CD843900C612C8 /* NotificationSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetup.swift; sourceTree = "<group>"; };
 		9B53D9713AFCDC192BB4F121 /* Pods_BusPrint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusPrint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24CF2759D6BB430EE402479 /* Pods-BusPrint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusPrint.release.xcconfig"; path = "Target Support Files/Pods-BusPrint/Pods-BusPrint.release.xcconfig"; sourceTree = "<group>"; };
 		A85FFB061F32A83EDC387D5D /* Pods-BusPrint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusPrint.debug.xcconfig"; path = "Target Support Files/Pods-BusPrint/Pods-BusPrint.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				5908EB79277D76BB00A69ECD /* NotificationView.swift */,
+				8DDD1F3B27CD843900C612C8 /* NotificationSetup.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				5956EF0E277D11DD00449B69 /* ContentView.swift in Sources */,
 				5908EB78277D769E00A69ECD /* TrackView.swift in Sources */,
 				5908EB7D277D76FF00A69ECD /* AuthenticationView.swift in Sources */,
+				8DDD1F3C27CD843900C612C8 /* NotificationSetup.swift in Sources */,
 				593295E6277F69300024022F /* TrackFirebase.swift in Sources */,
 				5908EB71277D6F5A00A69ECD /* HomeView.swift in Sources */,
 				5956EF0C277D11DD00449B69 /* BusPrintApp.swift in Sources */,
