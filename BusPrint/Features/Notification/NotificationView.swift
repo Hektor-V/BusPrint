@@ -3,7 +3,7 @@
 //  BusPrint
 //
 //  Created by Hector Vazquez on 12/29/21.
-//
+//  Changed by Kian on 4/20/21
 
 import SwiftUI
 
@@ -45,7 +45,7 @@ struct NotificationView: View {
                             .padding(.horizontal, 150.0)
                             .background(
                                 .ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
-                        Text("Bus is running late.")
+                        Text(CurrentNotification.note[CurrentNotification.index])
                             
                        
                     }

@@ -15,6 +15,17 @@ import Foundation
 import FirebaseFirestore
 import Firebase
 
+
+//This structure holds the notificaiton information for access
+// this allows for up to ten notifications to show up at any time. Index will always point to the latest notification
+// date will hold the point in time that the notification was read
+struct CurrentNotification {
+    var note = Array(repeating: "", count:10)
+    var index = 0
+    var date = [Date()]
+}
+
+
 class TrackNotifications : ObservableObject
 
 // the following will run immediatley upon the app's start
@@ -31,15 +42,13 @@ class TrackNotifications : ObservableObject
         
         else if let notify = docSnapshot{
             let message = docSnapshot.get("Notification")
-            let note = messase as! String
+            let CurrentNotification.note[CurrentNotification.index] = messase as! String
             
             //the following fcreates a timestamp
-            let date = Date()
-            let calendar = NSCalendar.currentCalendar()
-            let componenets = calendar.components(.CalendarUnitHour | CalendarUnitMinute, fromDate: date)
-            let hour = components.hour
-            let minutes = components.minute
-        }
+            let CurrentNotification.date = Date()
+            
+            //then we update the index to show the next open notification slot
+            CurrentNotification.index = (CurrentNotification.index + 1) % 10        }
     }
     
 }
