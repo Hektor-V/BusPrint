@@ -1,27 +1,50 @@
+//
+//  SettingsView.swift
+//  Shared
+//
+//  Created by Vladimir N on 4/25/22.
+//
 import SwiftUI
-import Firebase
 
 struct SettingsView: View {
-    var body: some View {
+    var body: some View{
         NavigationView {
+            
             Form{
-                Section(header: Text("App Settings")){
-                    Text("settings test")
-
-                    Toggle(isOn: .constant(true),
-                        label: {
-                            Text("Dark Mode")
-                    })  
+                
+                Section(header: Text("User")) {
+                    
+                    Toggle(isOn:.constant(true)){
+                        Text("Dark Mode")
+                    }
+                    
+                }
+                
+                Section(header: Text("Privacy")){
+                    
+                    Text("Privacy Policy")
+                }
+                
+                Section(header: Text("Account")){
+                    Text("Email")
+                    Text("Password")
+                    Text("Notifications")
+                }
+                
+                
+                Button("Sign Out"){
+                    print("Signed Out")
                 }
 
-                Button("Sign Out", role: destructive, action: signOut)
+                
             }
             .navigationTitle("Settings")
         }
     }
+    
 }
 
-Struct SettingsView_Previews: PreviewProvider {
+struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
     }
