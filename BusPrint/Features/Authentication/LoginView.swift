@@ -2,7 +2,6 @@
 //  LoginView.swift
 //  Login Screen
 //  Created by David Leung
-
 //Initializes Firebase and SwiftUI into the app
 import SwiftUI
 import Firebase
@@ -13,7 +12,7 @@ class FirebaseManager: NSObject {
     static let shared = FirebaseManager()
     
     override init() {
-        FirebaseApp.configure()
+        //FirebaseApp.configure()
         self.auth = Auth.auth()
         super.init()
     }
@@ -26,12 +25,15 @@ struct LoginView: View {
     @State var statusMessage = ""
     @State var email: String = ""
     @State var password: String = ""
+    @Binding var isLoggedIn: Bool
     
     var body: some View {
         NavigationView {
             ZStack {
                 //Sets the background to black as a placeholder for app background
                 Color.black.ignoresSafeArea()
+                Rectangle().fill(Color.primaryBlue).frame(width: 300, height:300).cornerRadius(30).rotationEffect(.degrees(-45.0)).offset(x:-100, y:-320)
+                Rectangle().fill(Color.primaryRed).frame(width: 300, height:300).cornerRadius(30).rotationEffect(.degrees(-45.0)).offset(x:-100, y:-400)
                 VStack {
                     //Text that switches depending on the bool loginMode
                     Text(loginMode ? "Sign In" : "Sign Up")
@@ -102,8 +104,15 @@ struct LoginView: View {
                 self.statusMessage = "Failed to login user: \(err)"
                 return
             }
-            print("Successfully logged in as user: \(result?.user.uid ?? "")")
-            self.statusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
+            
+            //Reloads the profile in order for verification check
+            FirebaseManager.shared.auth.currentUser?.reload()
+            //If verified, user is sent to main screen
+            if FirebaseManager.shared.auth.currentUser != nil && FirebaseManager.shared.auth.currentUser!.isEmailVerified {
+                isLoggedIn = true
+                print("Successfully logged in as user: \(result?.user.uid ?? "")")
+                self.statusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
+            }
         }
     }
     
@@ -157,9 +166,10 @@ struct ForgotButtonContent : View {
             .foregroundColor(.gray)
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
+/*
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
     }
 }
+*/

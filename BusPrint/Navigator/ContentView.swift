@@ -9,51 +9,54 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
- 
-
+    
+    @State var isLoggedIn: Bool = false
+    
     var body: some View {
         
-        TabView {
+        if !isLoggedIn {
             
+            LoginView(isLoggedIn: $isLoggedIn)
+        } else {
             
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("home")
-                    
-                }
-            NotificationView()
-                .tabItem {
-                    Image(systemName: "bell.fill")
+            TabView {
+                
+                
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("home")
+                        
+                    }
+                NotificationView()
+                    .tabItem {
+                        Image(systemName: "bell.fill")
 
-                    Text("Notification")
+                        Text("Notification")
 
 
-                }.badge(1)
+                    }.badge(1)
 
-            TrackView()
-                .tabItem {
-                    Image(systemName: "binoculars")
-                    Text("Track")
-                }
-            SettingsView()
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Settings")
+                TrackView()
+                    .tabItem {
+                        Image(systemName: "binoculars")
+                        Text("Track")
+                    }
+                SettingsView()
+                    .tabItem {
+                        Image(systemName: "gear")
+                        Text("Settings")
 
-                }
+                    }
 
+            }
+            
+            .accentColor(Color.primaryBlue)
+            .cornerRadius(15)
         }
-        
-        .accentColor(Color.primaryBlue)
-        .cornerRadius(15)
-        
-        
-        
-        
-        
-        
-        
+            
+            
+            
     }
 }
 
