@@ -24,31 +24,33 @@ struct CurrentNotification {
     var index = 0
     var date = [Date()]
 }
+public var notify = String("No new notifications")
 
-
-class TrackNotifications : ObservableObject
+class TrackNotifications : ObservableObject{
 
 // the following will run immediatley upon the app's start
     init()
-{
-    //connect to the database
-    let db = Firestore.firestore()
-    let bus_N = db.collection("GPS").document("7PEGCc4yuwSTZmi9RRnu")
-    
-    bus_N.addSnapshotListener { (docSnapshot, error) in
-        if let error = error{
+    {
+        //connect to the database
+        let db = Firestore.firestore()
+        let bus_N = db.collection("GPS").document("7PEGCc4yuwSTZmi9RRnu")
         
-            print(error.localizedDescription)}
+        bus_N.addSnapshotListener { (docSnapshot, error) in
+            if let error = error{
+            
+                print(error.localizedDescription)}
+            
+            else if let docSnapshot = docSnapshot{
+                let message = docSnapshot.get("Notification")
+                notify = messase as! String
+                
+                //the following fcreates a timestamp
+                //let CurrentNotification.date = Date()
+                
+                //then we update the index to show the next open notification slot
+               // CurrentNotification.index = (CurrentNotification.index + 1) % 10        }
+            }
         
-        else if let notify = docSnapshot{
-            let message = docSnapshot.get("Notification")
-            let CurrentNotification.note[CurrentNotification.index] = messase as! String
-            
-            //the following fcreates a timestamp
-            let CurrentNotification.date = Date()
-            
-            //then we update the index to show the next open notification slot
-            CurrentNotification.index = (CurrentNotification.index + 1) % 10        }
+        }
     }
-    
 }

@@ -45,7 +45,7 @@ struct NotificationView: View {
                             .padding(.horizontal, 150.0)
                             .background(
                                 .ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
-                        Text(CurrentNotification.note[CurrentNotification.index])
+                        Text(notify)
                             
                        
                     }
