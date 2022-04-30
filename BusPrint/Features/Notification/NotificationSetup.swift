@@ -29,7 +29,7 @@ public var notify = String()
 class TrackNotifications : ObservableObject
 {
 // the following will run immediatley upon the app's start
-init()
+    init()
     {
         //public var notify = CurrentNotification()
         //connect to the database
