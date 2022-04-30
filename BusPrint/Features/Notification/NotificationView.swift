@@ -19,17 +19,17 @@ struct NotificationView: View {
             
             
             
-            ScrollView(.vertical,showsIndicators: false)
-            {
+           
                 
                 VStack{
                     
                     Text("Notifications")
                             .font(.largeTitle)
                             .bold()
+                            .foregroundColor(.black)
                             .padding(.top,30)
                             .ignoresSafeArea()
-                            .offset(x: -60)
+                            .offset(y: -70)
                   
 //                    List(testing1.data2){ book in
 //                        Text(book.longitude)
@@ -38,20 +38,22 @@ struct NotificationView: View {
 //                    }
                     
                     
-                    
-                    ZStack{
-                        Image(systemName: "bell.fill")
-                            .resizable().frame(width: 35, height: 35)
-                            .offset(x: -120)
-                            .padding(.vertical,15)
-                            .padding(.horizontal, 150.0)
-                            .foregroundColor(.yellow)
-                            .background(
-                                .white, in: RoundedRectangle(cornerRadius: 20))
-                        Text(notify)
-                            
-                       
+                    VStack{
+                        ZStack{
+                            Image(systemName: "bell.fill")
+                                .resizable().frame(width: 35, height: 35)
+                                .offset(x: -120)
+                                .padding(.vertical,15)
+                                .padding(.horizontal, 150.0)
+                                .foregroundColor(.yellow)
+                                .background(
+                                    .white, in: RoundedRectangle(cornerRadius: 20))
+                            Text(notify)
+                                
+                           
+                        }//.offset(y:170)
                     }
+                   
                        
                     
                    
@@ -61,7 +63,7 @@ struct NotificationView: View {
                     
                 }
                 
-            }
+            
                     .foregroundColor(Color.white)
 
         }
