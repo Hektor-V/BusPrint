@@ -22,6 +22,7 @@
 		593843CC281CD11600579697 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593843CB281CD11600579697 /* EmailView.swift */; };
 		593843CE281CD18B00579697 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593843CD281CD18A00579697 /* PasswordView.swift */; };
 		593843D0281CD19700579697 /* NotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593843CF281CD19700579697 /* NotifyView.swift */; };
+		593843D3281CE5E600579697 /* Checkedin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593843D2281CE5E600579697 /* Checkedin.swift */; };
 		5956EF0C277D11DD00449B69 /* BusPrintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5956EF0B277D11DD00449B69 /* BusPrintApp.swift */; };
 		5956EF0E277D11DD00449B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5956EF0D277D11DD00449B69 /* ContentView.swift */; };
 		5956EF10277D11DF00449B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5956EF0F277D11DF00449B69 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		593843CB281CD11600579697 /* EmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		593843CD281CD18A00579697 /* PasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		593843CF281CD19700579697 /* NotifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyView.swift; sourceTree = "<group>"; };
+		593843D2281CE5E600579697 /* Checkedin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkedin.swift; sourceTree = "<group>"; };
 		5956EF08277D11DD00449B69 /* BusPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5956EF0B277D11DD00449B69 /* BusPrintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusPrintApp.swift; sourceTree = "<group>"; };
 		5956EF0D277D11DD00449B69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				5908EB69277D6B0600A69ECD /* Authentication */,
 				5908EB6A277D6B1000A69ECD /* Home */,
+				593843D1281CE5C700579697 /* Checkedin */,
 				5908EB6B277D6B1B00A69ECD /* Notification */,
 				5908EB6C277D6B2F00A69ECD /* Track */,
 				5908EB6D277D6B4500A69ECD /* Settings */,
@@ -135,6 +138,14 @@
 				5956EF0D277D11DD00449B69 /* ContentView.swift */,
 			);
 			path = Navigator;
+			sourceTree = "<group>";
+		};
+		593843D1281CE5C700579697 /* Checkedin */ = {
+			isa = PBXGroup;
+			children = (
+				593843D2281CE5E600579697 /* Checkedin.swift */,
+			);
+			path = Checkedin;
 			sourceTree = "<group>";
 		};
 		5956EEFF277D11DD00449B69 = {
@@ -267,6 +278,7 @@
 				5908EB71277D6F5A00A69ECD /* HomeView.swift in Sources */,
 				5956EF0C277D11DD00449B69 /* BusPrintApp.swift in Sources */,
 				593295E9277F701A0024022F /* TrackMapsView.swift in Sources */,
+				593843D3281CE5E600579697 /* Checkedin.swift in Sources */,
 				5908EB7A277D76BB00A69ECD /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

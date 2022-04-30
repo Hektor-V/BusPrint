@@ -10,7 +10,7 @@ import Firebase
 
 struct ContentView: View {
     
-    @State var isLoggedIn: Bool = false
+    @State var isLoggedIn: Bool = true
     
     var body: some View {
         
@@ -28,6 +28,14 @@ struct ContentView: View {
                         Text("home")
                         
                     }
+                
+                Checkedin()
+                    .tabItem {
+                        Image(systemName: "person.2.fill")
+                        Text("Check in")
+                        
+                    }
+                
                 NotificationView()
                     .tabItem {
                         Image(systemName: "bell.fill")

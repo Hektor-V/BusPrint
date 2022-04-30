@@ -31,9 +31,13 @@ struct LoginView: View {
         NavigationView {
             ZStack {
                 //Sets the background to black as a placeholder for app background
-                Color.black.ignoresSafeArea()
-                Rectangle().fill(Color.primaryBlue).frame(width: 300, height:300).cornerRadius(30).rotationEffect(.degrees(-45.0)).offset(x:-100, y:-320)
-                Rectangle().fill(Color.primaryRed).frame(width: 300, height:300).cornerRadius(30).rotationEffect(.degrees(-45.0)).offset(x:-100, y:-400)
+                //Color.black.ignoresSafeArea()
+               // Rectangle().fill(Color.primaryBlue).frame(width: 300, height:300).cornerRadius(30).rotationEffect(.degrees(-45.0)).offset(x:-100, y:-320)
+                //Rectangle().fill(Color.primaryRed).frame(width: 300, height:300).cornerRadius(30).rotationEffect(.degrees(-45.0)).offset(x:-100, y:-400)
+                Image("wallpaper5")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
                 VStack {
                     //Text that switches depending on the bool loginMode
                     Text(loginMode ? "Sign In" : "Sign Up")
