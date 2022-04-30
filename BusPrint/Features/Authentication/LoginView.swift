@@ -42,7 +42,7 @@ struct LoginView: View {
                     //Text that switches depending on the bool loginMode
                     Text(loginMode ? "Sign In" : "Sign Up")
                         .font(.largeTitle)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .frame(width: 120, alignment: .leading)
                         .padding(.trailing, 215)
                     //A picker that switches modes of the loginMode to display either the sign in or the sign up page
@@ -52,7 +52,7 @@ struct LoginView: View {
                     }.pickerStyle(SegmentedPickerStyle())
                         .background(Color.gray)
                         .frame(width: 345, height: 40)
-                        .cornerRadius(30)
+                        .cornerRadius(5)
                     //Email text and its textfield
                     EmailText()
                     TextField(" name@example.com", text: $email)
@@ -149,7 +149,7 @@ struct LoginView: View {
 struct EmailText : View {
     var body: some View {
         return Text("Email")
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .padding(.trailing, 300)
             .offset(x: 0, y: 7)
     }
@@ -158,7 +158,7 @@ struct EmailText : View {
 struct PasswordText : View {
     var body: some View {
         return Text("Password")
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .padding(.trailing, 269)
             .offset(x: 0, y: 7)
     }
