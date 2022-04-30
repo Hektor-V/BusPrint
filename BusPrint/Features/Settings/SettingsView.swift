@@ -1,80 +1,90 @@
 //
 //  SettingsView.swift
-//  BusPrint
+//  Shared
 //
-//  Created by Hector Vazquez on 12/29/21.
+//  Created by Vladimir N on 4/25/22.
 //
-
 import SwiftUI
 
-struct SettingsView: View {
-    var body: some View {
-        
+//import Firebase
 
-        ZStack{
-            Rectangle().fill(Color.primaryDarkBlue).edgesIgnoringSafeArea(.top)
-            Rectangle().fill(Color.primaryBlue).frame(width: 300, height:300).cornerRadius(30).rotationEffect(.degrees(-45.0)).offset(x:-100, y:-320)
-            Rectangle().fill(Color.primaryRed).frame(width: 300, height:300).cornerRadius(30).rotationEffect(.degrees(-45.0)).offset(x:-100, y:-400)
-            
-            
- 
-            
-            ScrollView(.vertical,showsIndicators: false)
-            {
-                
-                VStack{
-                    
-                    Text("Settings")
-                            .font(.largeTitle)
-                            .bold()
-                            .padding(.top,30)
-                            .ignoresSafeArea()
-                            .offset(x: -85)
-                  
-                    
-                    
-                    
-                    
-                    ZStack{
-                        Image(systemName: "person")
-                            .resizable().frame(width: 35, height: 35)
-                            .offset(x: -120)
-                            .padding(.vertical,15)
-                            .padding(.horizontal, 150.0)
-                            .background(
-                                .ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
-                        Text("Account")
-                            
-                       
+// TODO: Change appearance to match overall app design
+// TODO: Add functionality to EmailView and PasswordView
+struct SettingsView: View {
+    // vars for DarkMode
+    @State var isDarkModeOn: Bool = false
+
+    var body: some View {
+        // NavigationView for the settings page
+        NavigationView {
+            // Form contains sections for each feature
+            Form {
+                Section("Appearance") {
+                    // TODO: remember users selection
+                    Toggle(isOn: $isDarkModeOn) {
+                        Text("Dark Mode")
                     }
-                    ZStack{
-                        Image(systemName: "power")
-                            .resizable().frame(width: 35, height: 35)
-                            .offset(x: -120)
-                            .padding(.vertical,15)
-                            .padding(.horizontal, 150.0)
-                            .background(
-                                .ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
-                        Text("Logout")
-                            
-                       
-                    }
-                       
-                    
-                        
-                    
                 }
                 
+                Section("Account") {
+                    // Email option
+                    NavigationLink(destination: EmailView(), label: {
+                        SettingsRowView(title: "Email", systemImageName: "envelope")
+                    })
+                    
+                    // Password option
+                    NavigationLink(destination: PasswordView(), label: {
+                        SettingsRowView(title: "Password", systemImageName: "ellipsis.rectangle")
+                    })
+                    
+                    // Notify option
+                    NavigationLink(destination: NotifyView(), label: {
+                        SettingsRowView(title: "Notifications", systemImageName: "phone")
+                    })
+                    
+                }
+
+                
+                Section("About") {
+                    HStack {
+                        Text("Version")
+                        Spacer()
+                        Text("v.1.0")
+                    }
+                }
+                
+                Button("Sign Out", role: .destructive){
+                    // sign the user out of firebase
+                    /*
+                     let firebaseAuth = Auth.auth()
+                     do {
+                     try firebaseAuth.signOut()
+                     } catch let signOutError as NSError {
+                     print("Error signing out: %@", signOutError)
+                     */
+                }
             }
-                    .foregroundColor(Color.white)
+            .navigationBarTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        }
-            
-        }
-            
+    }
+}
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+    }
+}
+
+// struct handling the settings row views
+// 2 vars: title and systemimage (SF Symbols)
+struct SettingsRowView: View {
+    var title : String
+    var systemImageName : String
+    var body : some View {
+        HStack (spacing : 15) {
+            Image(systemName: systemImageName)
+            Text(title)
+        }
     }
 }
