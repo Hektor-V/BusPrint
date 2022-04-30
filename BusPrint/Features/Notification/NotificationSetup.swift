@@ -20,17 +20,18 @@ import Firebase
 // this allows for up to ten notifications to show up at any time. Index will always point to the latest notification
 // date will hold the point in time that the notification was read
 struct CurrentNotification {
-    var note = Array(repeating: "", count:10)
+    var note = String()//Array(repeating: "", count:10)
     var index = 0
     var date = [Date()]
 }
-public var notify = String("No new notifications")
+public var notify = String()
 
-class TrackNotifications : ObservableObject{
-
+class TrackNotifications : ObservableObject
+{
 // the following will run immediatley upon the app's start
     init()
     {
+        //public var notify = CurrentNotification()
         //connect to the database
         let db = Firestore.firestore()
         let bus_N = db.collection("GPS").document("7PEGCc4yuwSTZmi9RRnu")
@@ -42,15 +43,16 @@ class TrackNotifications : ObservableObject{
             
             else if let docSnapshot = docSnapshot{
                 let message = docSnapshot.get("Notification")
-                notify = messase as! String
+                notify = message as! String
                 
                 //the following fcreates a timestamp
                 //let CurrentNotification.date = Date()
                 
                 //then we update the index to show the next open notification slot
-               // CurrentNotification.index = (CurrentNotification.index + 1) % 10        }
+                //notify.index = (notify.index + 1) % 10
+                
             }
-        
         }
+        
     }
 }
