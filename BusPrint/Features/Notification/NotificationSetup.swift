@@ -24,7 +24,8 @@ struct CurrentNotification {
     var index = 0
     var date = [Date()]
 }
-public var notify = String()
+
+@Published var notify = String()
 
 class TrackNotifications : ObservableObject
 {
@@ -43,7 +44,8 @@ class TrackNotifications : ObservableObject
             
             else if let docSnapshot = docSnapshot{
                 let message = docSnapshot.get("Notification")
-                notify = message as! String
+                let note = message as! String
+                self.notify = note
                 
                 //the following fcreates a timestamp
                 //let CurrentNotification.date = Date()
