@@ -66,7 +66,8 @@ struct SettingsView: View {
             }
             .navigationBarTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
-        }
+        }.navigationViewStyle(.stack)                                       //somehthing I (hector) added for error codes that were showing, see link attached
+                                                                            /*https://www.hackingwithswift.com/forums/100-days-of-swiftui/unable-to-simultaneously-satisfy-constraints-warning-when-adding-a-navigation-title/12883#:~:text=%22%5BLayoutConstraints%5D%20Unable%20to%20simultaneously,or%20constraints%20and%20fix%20it.*/
     }
 }
 

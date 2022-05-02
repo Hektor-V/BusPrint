@@ -27,6 +27,7 @@
 		5956EF0E277D11DD00449B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5956EF0D277D11DD00449B69 /* ContentView.swift */; };
 		5956EF10277D11DF00449B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5956EF0F277D11DF00449B69 /* Assets.xcassets */; };
 		5956EF13277D11DF00449B69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5956EF12277D11DF00449B69 /* Preview Assets.xcassets */; };
+		5971411A281FA67200E8AEEF /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59714119281FA67200E8AEEF /* WeatherManager.swift */; };
 		8DDD1F3C27CD843900C612C8 /* NotificationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD1F3B27CD843900C612C8 /* NotificationSetup.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		5956EF0D277D11DD00449B69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5956EF0F277D11DF00449B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5956EF12277D11DF00449B69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		59714119281FA67200E8AEEF /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		8DDD1F3B27CD843900C612C8 /* NotificationSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				5908EB70277D6F5A00A69ECD /* HomeView.swift */,
+				59714119281FA67200E8AEEF /* WeatherManager.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				5908EB71277D6F5A00A69ECD /* HomeView.swift in Sources */,
 				5956EF0C277D11DD00449B69 /* BusPrintApp.swift in Sources */,
 				593295E9277F701A0024022F /* TrackMapsView.swift in Sources */,
+				5971411A281FA67200E8AEEF /* WeatherManager.swift in Sources */,
 				593843D3281CE5E600579697 /* Checkedin.swift in Sources */,
 				5908EB7A277D76BB00A69ECD /* NotificationView.swift in Sources */,
 			);

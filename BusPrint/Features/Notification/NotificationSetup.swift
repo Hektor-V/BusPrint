@@ -25,17 +25,18 @@ struct CurrentNotification {
     var date = [Date()]
 }
 
-@Published var notify = String()
+
 
 class TrackNotifications : ObservableObject
 {
+    @Published var notify = String()                                                    //published varable must be inside the oberserableObject created, also must be a published varable nothing else -HV
 // the following will run immediatley upon the app's start
     init()
     {
         //public var notify = CurrentNotification()
         //connect to the database
         let db = Firestore.firestore()
-        let bus_N = db.collection("GPS").document("7PEGCc4yuwSTZmi9RRnu")
+        let bus_N = db.collection("GPS").document("pPnfvltnUIxzdMcz6iCO")               //created a new doument for the notifications , reason was that it was having troubles when accessing the collection inside the documents error: nil  -HV
         
         bus_N.addSnapshotListener { (docSnapshot, error) in
             if let error = error{
@@ -43,9 +44,12 @@ class TrackNotifications : ObservableObject
                 print(error.localizedDescription)}
             
             else if let docSnapshot = docSnapshot{
-                let message = docSnapshot.get("Notification")
+                let message = docSnapshot.get("Notifi")
                 let note = message as! String
                 self.notify = note
+                //print("this is the notification\(self.notify)")
+                //print(docSnapshot.documentID)
+                //print(docSnapshot.data())
                 
                 //the following fcreates a timestamp
                 //let CurrentNotification.date = Date()

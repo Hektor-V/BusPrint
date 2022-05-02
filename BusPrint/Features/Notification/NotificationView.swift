@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct NotificationView: View {
+    
+    @ObservedObject var hi = TrackNotifications()
+    
     var body: some View {
+        
+        
         ZStack{
-            //Rectangle().fill(Color.primaryDarkBlue).edgesIgnoringSafeArea(.top)
-            //Rectangle().fill(Color.primaryBlue).frame(width: 300, height:300).cornerRadius(30).rotationEffect(.degrees(-45.0)).offset(x:-100, y:-320)
-            //Rectangle().fill(Color.primaryRed).frame(width: 300, height:300).cornerRadius(30).rotationEffect(.degrees(-45.0)).offset(x:-100, y:-400)
             Image("wallpaper5")
                 .resizable()
                 .scaledToFill()
-            
-            
-            
-           
                 
                 VStack{
                     
@@ -48,19 +46,12 @@ struct NotificationView: View {
                                 .foregroundColor(.yellow)
                                 .background(
                                     .white, in: RoundedRectangle(cornerRadius: 20))
-                            Text(notify)
+                            Text(self.hi.notify)
+                                .foregroundColor(.black)
                                 
                            
                         }//.offset(y:170)
                     }
-                   
-                       
-                    
-                   
-                
-                    
-                    
-                    
                 }
                 
             
