@@ -2,6 +2,7 @@
 //  LoginView.swift
 //  Login Screen
 //  Created by David Leung
+//  Updated 5/5/22
 //Initializes Firebase and SwiftUI into the app
 import SwiftUI
 import Firebase
