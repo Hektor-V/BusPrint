@@ -10,7 +10,7 @@ import Firebase
 
 struct ContentView: View {
     
-    @State var isLoggedIn: Bool = true
+    @State var isLoggedIn: Bool = false
     
     var body: some View {
         

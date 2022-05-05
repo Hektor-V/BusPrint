@@ -86,7 +86,7 @@ struct LoginView: View {
                         ForgotButtonContent()
                     }
                     Text(self.statusMessage)
-                        .foregroundColor(.white)
+                        .foregroundColor(.red)
                 }
             }
         }
@@ -105,7 +105,8 @@ struct LoginView: View {
         FirebaseManager.shared.auth.signIn(withEmail: email, password: password) { result, err in
             if let err = err {
                 print("Failed to login user:", err)
-                self.statusMessage = "Failed to login user: \(err)"
+                //self.statusMessage = "Failed to login user: \(err)"
+                self.statusMessage = "Failed to login user"
                 return
             }
             
@@ -115,7 +116,8 @@ struct LoginView: View {
             if FirebaseManager.shared.auth.currentUser != nil && FirebaseManager.shared.auth.currentUser!.isEmailVerified {
                 isLoggedIn = true
                 print("Successfully logged in as user: \(result?.user.uid ?? "")")
-                self.statusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
+                //self.statusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
+                self.statusMessage = "Successfully logged in as user"
             }
         }
     }
@@ -126,11 +128,13 @@ struct LoginView: View {
         FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { result, err in
             if let err = err {
                 print("Failed to create user:", err)
-                self.statusMessage = "Failed to create user: \(err)"
+                //self.statusMessage = "Failed to create user: \(err)"
+                self.statusMessage = "Failed to create user"
                 return
             }
             print("Successfully created user: \(result?.user.uid ?? "")")
-            self.statusMessage = "Successfully created user: \(result?.user.uid ?? "")"
+            //self.statusMessage = "Successfully created user: \(result?.user.uid ?? "")"
+            self.statusMessage = "Successfully created user"
             //performs verifyUser function
             verifyUser()
         }
