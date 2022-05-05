@@ -10,8 +10,11 @@ import SwiftUI
 struct NotificationView: View {
     
     @ObservedObject var hi = TrackNotifications()
+    @State var newNotification: String = ""
     
     var body: some View {
+        let coll = "GPS"
+        let docu = "pPnfvltnUIxzdMcz6iCO"
         
         
         ZStack{
@@ -51,6 +54,35 @@ struct NotificationView: View {
                                 
                            
                         }//.offset(y:170)
+                    }
+                
+                    
+                   
+                    VStack{
+                        ZStack{
+                            
+                            // Pressing the Button will update the Notifi field in firebase
+                            // with the value in the text Field
+                            TextField($newNotification, 
+                                      placeholder: Text("Type in notification here..."))
+                                      
+                            
+                            Button(action:{
+                                db.collecion(coll).document(docu).setData([
+                                    "Notifi" : newNotification
+                                ])}){ Text("Send New Notification")
+                                    }
+                                .resizable().frame(width: 35, height: 35)
+                                .offset(x: -180)
+                                .padding(.vertical,15)
+                                .padding(.horizontal, 150.0)
+                                .foregroundColor(.blue)
+                                .background(
+                                    .white, in: RoundedRectangle(cornerRadius: 20))
+                            
+                                    }
+                            }
+                        }
                     }
                 }
                 
