@@ -60,9 +60,11 @@ struct NotificationView: View {
                     }
                 
                     
-                   /*
+                   
                     VStack{
                         TextField("Type in notification here...", text:$newNotification)
+                        .offset(y:20)
+                        .padding(.bottom, 10)
                         
                         ZStack{
                             
@@ -73,10 +75,9 @@ struct NotificationView: View {
                                 db.collection(coll).document(docu).setData(["Notifi" : newNotification])
                             } label: {
                                 Text("Send New Notification")
-                                    .offset(y: 180)
+                                    .offset(y: 20)
                                     //.resizable().frame(widvth: 35, height: 35)
-                                    .padding(.vertical,15)
-                                    .padding(.horizontal, 150.0)
+                                    .padding(.bottom,15)
                                     .foregroundColor(.blue)
                                     .background(
                                         .white, in: RoundedRectangle(cornerRadius: 20))
@@ -88,7 +89,7 @@ struct NotificationView: View {
                                     }
                             }
                     
-                    */
+                    
                     
                     
                     
