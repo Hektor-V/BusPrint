@@ -25,9 +25,7 @@ struct Checkedin: View {
                         .ignoresSafeArea()
                         .offset(x: -100)
                         .foregroundColor(.black)
-            
-            
-            
+
             
             VStack{
                     Text("AM check in")

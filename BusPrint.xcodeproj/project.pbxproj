@@ -18,6 +18,7 @@
 		5908EB7F277D774F00A69ECD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908EB7E277D774F00A69ECD /* SettingsView.swift */; };
 		593295E6277F69300024022F /* TrackFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593295E5277F69300024022F /* TrackFirebase.swift */; };
 		593295E9277F701A0024022F /* TrackMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593295E8277F701A0024022F /* TrackMapsView.swift */; };
+		5935F39D28225BB1007F9F44 /* TrackMapsViewV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5935F39C28225BB1007F9F44 /* TrackMapsViewV2.swift */; };
 		593843CA281B68D600579697 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 593843C9281B68D600579697 /* GoogleService-Info.plist */; };
 		593843CC281CD11600579697 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593843CB281CD11600579697 /* EmailView.swift */; };
 		593843CE281CD18B00579697 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593843CD281CD18A00579697 /* PasswordView.swift */; };
@@ -39,6 +40,7 @@
 		5908EB7E277D774F00A69ECD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		593295E5277F69300024022F /* TrackFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackFirebase.swift; sourceTree = "<group>"; };
 		593295E8277F701A0024022F /* TrackMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMapsView.swift; sourceTree = "<group>"; };
+		5935F39C28225BB1007F9F44 /* TrackMapsViewV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMapsViewV2.swift; sourceTree = "<group>"; };
 		593843C9281B68D600579697 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		593843CB281CD11600579697 /* EmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		593843CD281CD18A00579697 /* PasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				5908EB77277D769E00A69ECD /* TrackView.swift */,
 				593295E8277F701A0024022F /* TrackMapsView.swift */,
 				593295E5277F69300024022F /* TrackFirebase.swift */,
+				5935F39C28225BB1007F9F44 /* TrackMapsViewV2.swift */,
 			);
 			path = Track;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				8DDD1F3C27CD843900C612C8 /* NotificationSetup.swift in Sources */,
 				593295E6277F69300024022F /* TrackFirebase.swift in Sources */,
 				593843CE281CD18B00579697 /* PasswordView.swift in Sources */,
+				5935F39D28225BB1007F9F44 /* TrackMapsViewV2.swift in Sources */,
 				5908EB71277D6F5A00A69ECD /* HomeView.swift in Sources */,
 				5956EF0C277D11DD00449B69 /* BusPrintApp.swift in Sources */,
 				593295E9277F701A0024022F /* TrackMapsView.swift in Sources */,
@@ -417,6 +421,7 @@
 				DEVELOPMENT_TEAM = WDXE35AZKS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -446,6 +451,7 @@
 				DEVELOPMENT_TEAM = WDXE35AZKS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

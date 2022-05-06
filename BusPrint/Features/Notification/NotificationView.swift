@@ -6,15 +6,18 @@
 //  Changed by Kian on 4/28/21
 
 import SwiftUI
+import FirebaseFirestore
+import Firebase
 
 struct NotificationView: View {
     
     @ObservedObject var hi = TrackNotifications()
     @State var newNotification: String = ""
+   // let db = Firestore.firestore()
     
     var body: some View {
-        let coll = "GPS"
-        let docu = "pPnfvltnUIxzdMcz6iCO"
+        //let coll = "GPS"
+        //let docu = "pPnfvltnUIxzdMcz6iCO"
         
         
         ZStack{
@@ -36,7 +39,7 @@ struct NotificationView: View {
 //                        Text(book.longitude)
 //                        Text(book.latitude)
 //
-//                    }
+                    }
                     
                     
                     VStack{
@@ -57,41 +60,44 @@ struct NotificationView: View {
                     }
                 
                     
-                   
+                   /*
                     VStack{
+                        TextField("Type in notification here...", text:$newNotification)
+                        
                         ZStack{
                             
                             // Pressing the Button will update the Notifi field in firebase
                             // with the value in the text Field
-                            TextField($newNotification, 
-                                      placeholder: Text("Type in notification here..."))
-                                      
                             
-                            Button(action:{
-                                db.collecion(coll).document(docu).setData([
-                                    "Notifi" : newNotification
-                                ])}){ Text("Send New Notification")
-                                    }
-                                .resizable().frame(width: 35, height: 35)
-                                .offset(x: -180)
-                                .padding(.vertical,15)
-                                .padding(.horizontal, 150.0)
-                                .foregroundColor(.blue)
-                                .background(
-                                    .white, in: RoundedRectangle(cornerRadius: 20))
+                            Button {
+                                db.collection(coll).document(docu).setData(["Notifi" : newNotification])
+                            } label: {
+                                Text("Send New Notification")
+                                    .offset(y: 180)
+                                    //.resizable().frame(widvth: 35, height: 35)
+                                    .padding(.vertical,15)
+                                    .padding(.horizontal, 150.0)
+                                    .foregroundColor(.blue)
+                                    .background(
+                                        .white, in: RoundedRectangle(cornerRadius: 20))
+
+                                        }
+
                             
+                                                        
                                     }
                             }
+                    
+                    */
+                    
+                    
+                    
                         }
                     }
-                }
-                
-            
-                    .foregroundColor(Color.white)
-
-        }
-    }
 }
+
+    
+
 
 struct NotificationView_Previews: PreviewProvider {
     static var previews: some View {

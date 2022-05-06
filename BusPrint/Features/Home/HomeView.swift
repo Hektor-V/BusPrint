@@ -21,7 +21,7 @@ struct HomeView: View
     {
         @State var date = Date()                        // Date() is the initializer for Date objects, which retrieve date & time information based on the user’s region.
     //let time = ObservableObject
-        
+       // @ObservedObject var hello = WeatherManger()
         var body: some View{
             ZStack{
                 
